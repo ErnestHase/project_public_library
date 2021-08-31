@@ -29,6 +29,7 @@ function partitionBooksByBorrowedStatus(books) {
 function getBorrowersForBook(book, accounts) {
  const allBorrowers = book.borrows.map((lend) => {
   const account = findAccountById(accounts, lend.id);
+   /* the line above here should be the helper function needed. If it is not sufficient let me know what more i need to add so it will pass. */
    return {
      id: lend.id, 
      returned: lend.returned, 
